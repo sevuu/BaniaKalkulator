@@ -94,6 +94,8 @@ int main(int argc, const char** argv){
     SLista listapiw;
     listapiw.wczytaj();
     listapiw.wypisz();
-    cout<<"Najopłacalniejszy alkohol: "<<listapiw.najoplacalniejsze()<<endl;
+	if(listapiw.liczba>1){
+    	cout<<"Najopłacalniejszy alkohol: "<<listapiw.najoplacalniejsze()<<endl;
+	}
     return 0;
 }
