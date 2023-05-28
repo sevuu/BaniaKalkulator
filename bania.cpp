@@ -35,10 +35,14 @@ void STrunek::wczytaj(){
     cin.getline(nazwa,64);
     cout<<"ml: ";
     cin>>ml;
+	//nie do konca wiem jak to dziala, ale program sie nie wywala jak sie wpisze przykladowo '500ml' zamiast 500
+    cin.ignore(64, '\n');	
     cout<<"woltaż: ";
     cin>>procent;
+    cin.ignore(64, '\n');
     cout<<"cena: ";
     cin>>cena;
+    cin.ignore(64, '\n');
 };
 
 float STrunek::etanol(){
