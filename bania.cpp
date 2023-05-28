@@ -2,7 +2,6 @@
 // na podstawie rownania spejsona (https://pastebin.com/raw/589tPqsy)
 
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -84,14 +83,14 @@ string SLista::najoplacalniejsze(){
     for(int i = 0; i<liczba; i++){
         if(piwo[i].spejson()>tmp){
             tmp = piwo[i].spejson();
-            tmpnazwa = piwo[i].nazwa;
+            string nazwastring(piwo[i].nazwa);
+            tmpnazwa = nazwastring;
         }
     }
     return tmpnazwa;
 }
 
 int main(int argc, const char** argv){
-    STrunek piwo;
     SLista listapiw;
     listapiw.wczytaj();
     listapiw.wypisz();
